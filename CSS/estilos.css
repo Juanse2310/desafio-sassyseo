@@ -1,0 +1,118 @@
+body {
+  background-color: lightyellow;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; }
+
+ul {
+  display: block;
+  list-style: none;
+  position: relative;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  padding-left: 14px;
+  padding-right: 1px;
+  background-color: grey;
+  width: 99vw;
+  border-bottom: 5px solid lightblue;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px; }
+  ul li {
+    display: inline-block;
+    position: relative;
+    width: 14%;
+    align-content: space-between; }
+    ul li a {
+      color: white;
+      font-weight: 600; }
+      ul li a a:hover {
+        color: red; }
+
+.principal {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 2px 4px 2px 4px;
+  padding: 4px 2px 0px 2px;
+  align-content: center;
+  justify-content: center; }
+  .principal .principal__titulo {
+    text-align: center;
+    font-weight: 900;
+    position: relative;
+    width: 100%; }
+  .principal .principal__parrafo {
+    align-items: center;
+    font-weight: 600;
+    display: inline-block;
+    position: r;
+    width: 50%;
+    background-image: url(imagenes/ying%20yang.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px; }
+  .principal .principal__imagen {
+    display: inline-block;
+    position: r;
+    width: 49%;
+    height: 300px; }
+
+footer {
+  display: block;
+  position: relative;
+  background-color: grey; }
+  footer .pie {
+    color: white;
+    font-weight: 600; }
+
+/*maps */
+.btn-blanco {
+  background-color: white; }
+
+.btn-amarillo {
+  background-color: yellow; }
+
+.btn-verde {
+  background-color: green; }
+
+.btn-azul {
+  background-color: blue; }
+
+.btn-color1 {
+  color: rgba(250, 6, 6, 0.897); }
+
+.btn-color2 {
+  color: #21c500; }
+
+.btn-color3 {
+  color: #000000; }
+
+/*map get */
+.estilo1 {
+  color: white;
+  text-align: left;
+  font-size: 15px; }
+
+.estilo2, .estilo2--nueva {
+  position: relative;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  font-size: 15px; }
+
+/*extend*/
+.estilo2--nueva {
+  font-size: 30px; }
+
+/*mixin*/
+.box1 {
+  height: 35px;
+  width: 950px; }
+
+.box2 {
+  height: 45px;
+  width: 950px; }
+
+.box3 {
+  height: 65px;
+  width: 950px; }

@@ -1,0 +1,146 @@
+body{
+    background-color: lightyellow;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+ul{
+    display: block;
+    list-style: none;
+    position: relative;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    padding-left: 14px;
+    padding-right: 1px;
+    background-color: grey;
+    width: 99vw;
+    border-bottom: 5px solid lightblue;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    li{
+        display: inline-block;
+        position: relative;
+        width: 14%;
+        align-content: space-between;
+
+        a{
+            color:white;
+            font-weight: 600;
+        a:hover{
+                color:red;
+            }
+        }
+
+    }
+}
+.principal{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 2px 4px 2px 4px;
+    padding: 4px 2px 0px 2px;
+    align-content: center;
+    justify-content: center;
+    
+  .principal__titulo{
+    text-align: center;
+    font-weight: 900;
+    position: relative;
+    width: 100%;
+  }  
+  .principal__parrafo{
+    align-items: center;
+    font-weight: 600;
+    display: inline-block;
+    position: r;
+    width: 50%;
+    background-image: url(imagenes/ying%20yang.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+        }
+.principal__imagen{
+    display: inline-block;
+    position: r;
+    width: 49%;
+    height: 300px;      
+}
+
+}
+
+footer{
+    display: block;
+    position: relative;
+    background-color: grey;
+
+    .pie{
+        color: white;
+        font-weight: 600;
+    }
+}
+
+/*maps */
+$graduacion:(blanco:white, amarillo:yellow, verde: green, azul: blue);
+$letra:(color1:rgba(250, 6, 6, 0.897), color2:#21c500, color3:#000000);
+
+@each $clave, $valor in $graduacion {
+    .btn-#{$clave} {
+        background-color: $valor;
+    }
+}
+
+@each $clave2, $valor2 in $letra {
+    .btn-#{$clave2} {
+        color: $valor2;
+    }
+}
+
+/*map get */
+$footer: (
+    color: white,
+    centro: left,
+    fuente: 15px
+
+);
+$principal: (
+    posicion: relative,
+    disp: block,
+    centro: center,
+    fuera: hidden,
+    tamano: 15px
+
+);
+
+.estilo1 {
+    color: map-get($footer, color );
+    text-align: map-get($footer, centro );
+    font-size: map-get($footer , fuente );
+}
+.estilo2 {
+    position: map-get($principal, posicion );
+    display: map-get($principal, disp);
+    text-align: map-get($principal, centro );
+    overflow: map-get($principal, fuera);
+    font-size: map-get($principal , tamano );
+   
+}
+/*extend*/ 
+.estilo2--nueva{
+    @extend .estilo2;
+    font-size: 30px;
+}
+/*mixin*/
+@mixin sizes($height, $width) {
+    height: $height;
+    width:$width;
+}
+.box1{
+    @include sizes(35px,950px );
+}
+.box2{
+    @include sizes(45px,950px );
+}
+.box3{
+    @include sizes(65px,950px );
+}
